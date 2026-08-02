@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
     <meta property="og:description" content="We build premium digital experiences that drive growth — from startups to global enterprises." />
     <meta property="og:url" content="https://www.elevatedigitals.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.elevatedigitals.com/og-image.jpg" /> <!-- REPLACE with actual image URL -->
+    <meta property="og:image" content="https://www.elevatedigitals.com/og-image.jpg" />
     <meta property="og:image:alt" content="Elevate Digitals - Web Development Agency" />
     <meta property="og:site_name" content="Elevate Digitals" />
     <meta property="og:locale" content="en_US" />
@@ -24,10 +24,10 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Elevate Digitals — Premium Web Development Agency" />
     <meta name="twitter:description" content="We build premium digital experiences that drive growth — from startups to global enterprises." />
-    <meta name="twitter:image" content="https://www.elevatedigitals.com/og-image.jpg" /> <!-- REPLACE with actual image URL -->
+    <meta name="twitter:image" content="https://www.elevatedigitals.com/og-image.jpg" />
     <meta name="twitter:image:alt" content="Elevate Digitals - Web Development Agency" />
 
-    <!-- ===== FAVICON & ICONS (using emoji favicon for quick setup; replace with real files) ===== -->
+    <!-- ===== FAVICON & ICONS ===== -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -36,10 +36,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
     
-    <!-- ===== TAILWIND CSS (PRODUCTION - Replace CDN with compiled CSS file for live deployment) ===== -->
+    <!-- ===== TAILWIND CSS ===== -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles remain the same, ensuring they work with the new additions */
         * {
             margin: 0;
             padding: 0;
@@ -47,61 +46,42 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            color: #111827;
+            background: #020617;
+            color: #f1f5f9;
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
-        .dark body {
-            background: #020617;
-            color: #f1f5f9;
-        }
-        /* ... (all existing custom styles are preserved) ... */
         .glass {
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-            background: rgba(255, 255, 255, 0.72);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-        }
-        .dark .glass {
-            background: rgba(2, 6, 23, 0.72);
-            border-color: rgba(255, 255, 255, 0.06);
+            background: rgba(2, 6, 23, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
         .shadow-soft {
-            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.3);
         }
         .shadow-card {
-            box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.05);
-        }
-        .dark .shadow-card {
             box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.3);
         }
         .gradient-blob {
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.4;
+            opacity: 0.15;
             pointer-events: none;
             z-index: 0;
-        }
-        .dark .gradient-blob {
-            opacity: 0.2;
         }
         .card-lift {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card-lift:hover {
             transform: translateY(-6px);
-            box-shadow: 0 24px 48px -12px rgba(37, 99, 235, 0.15);
+            box-shadow: 0 24px 48px -12px rgba(37, 99, 235, 0.25);
         }
         .nav-blur {
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            background: rgba(255, 255, 255, 0.78);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-        }
-        .dark .nav-blur {
-            background: rgba(2, 6, 23, 0.82);
+            background: rgba(2, 6, 23, 0.85);
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
         .mobile-menu {
@@ -125,17 +105,14 @@
             width: 48px;
             height: 48px;
             border-radius: 14px;
-            background: rgba(37, 99, 235, 0.08);
+            background: rgba(37, 99, 235, 0.15);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #2563eb;
+            color: #60a5fa;
             font-size: 22px;
             font-weight: 700;
             flex-shrink: 0;
-        }
-        .dark .service-icon {
-            background: rgba(37, 99, 235, 0.15);
         }
         .faq-answer {
             max-height: 0;
@@ -175,85 +152,48 @@
             width: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2563eb;
-            border-radius: 20px;
-        }
-        .dark ::-webkit-scrollbar-track {
             background: #0f172a;
         }
-        .dark ::-webkit-scrollbar-thumb {
+        ::-webkit-scrollbar-thumb {
             background: #3b82f6;
+            border-radius: 20px;
         }
         .trusted-logo {
             font-weight: 600;
             font-size: 1.1rem;
             letter-spacing: -0.02em;
-            color: #64748b;
+            color: #94a3b8;
             transition: color 0.2s;
         }
-        .dark .trusted-logo {
-            color: #94a3b8;
-        }
         .trusted-logo:hover {
-            color: #2563eb;
-        }
-        .dark .trusted-logo:hover {
             color: #60a5fa;
         }
         .pricing-popular {
-            border-color: #2563eb;
-            box-shadow: 0 12px 40px -12px rgba(37, 99, 235, 0.2);
-        }
-        .dark .pricing-popular {
             border-color: #3b82f6;
             box-shadow: 0 12px 40px -12px rgba(37, 99, 235, 0.15);
         }
-        .theme-toggle {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 50%;
-            color: #475569;
-            transition: background 0.2s;
-        }
-        .theme-toggle:hover {
-            background: #f1f5f9;
-        }
-        .dark .theme-toggle {
-            color: #94a3b8;
-        }
-        .dark .theme-toggle:hover {
-            background: #1e293b;
-        }
         .section-bg {
-            background: #f8fafc;
-        }
-        .dark .section-bg {
             background: #0a0e1a;
         }
         input,
         textarea,
         select {
             transition: border-color 0.2s, box-shadow 0.2s;
+            background: #020617;
+            color: #f1f5f9;
+            border: 1px solid #1e293b;
         }
         input:focus,
         textarea:focus,
         select:focus {
             outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-        .dark input:focus,
-        .dark textarea:focus,
-        .dark select:focus {
             border-color: #3b82f6;
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
         }
-        /* Skip to content link for accessibility */
+        input::placeholder,
+        textarea::placeholder {
+            color: #64748b;
+        }
         .skip-link {
             position: absolute;
             top: -40px;
@@ -276,47 +216,44 @@
         }
         .form-status.success {
             display: block;
-            background: #ecfdf5;
-            color: #065f46;
-            border: 1px solid #a7f3d0;
+            background: #064e3b;
+            color: #6ee7b7;
+            border: 1px solid #065f46;
         }
         .form-status.error {
             display: block;
-            background: #fef2f2;
-            color: #991b1b;
-            border: 1px solid #fecaca;
+            background: #7f1d1d;
+            color: #fca5a5;
+            border: 1px solid #991b1b;
+        }
+        select option {
+            background: #020617;
+            color: #f1f5f9;
         }
     </style>
 </head>
 <body>
 
-    <!-- Skip to main content -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- ========== NAVIGATION ========== -->
     <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-blur" role="banner">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 lg:h-20">
             <a href="#" class="flex items-center gap-1.5" aria-label="Corravale Digitals Home">
-                <!-- FIXED BRANDING: Consistent "Corravale Digitals" name -->
                 <span class="text-2xl font-bold tracking-tight text-[#2563EB]">Corravale</span>
-                <span class="text-sm font-medium text-[#0F172A] dark:text-white/80">Digitals</span>
+                <span class="text-sm font-medium text-white/80">Digitals</span>
             </a>
 
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium" aria-label="Main navigation">
-                <a href="#services" class="hover:text-[#2563EB] transition-colors">Services</a>
-                <a href="#work" class="hover:text-[#2563EB] transition-colors">Work</a>
-                <a href="#pricing" class="hover:text-[#2563EB] transition-colors">Pricing</a>
-                <a href="#contact" class="hover:text-[#2563EB] transition-colors">Contact</a>
+                <a href="#services" class="hover:text-[#60a5fa] transition-colors text-white/80">Services</a>
+                <a href="#work" class="hover:text-[#60a5fa] transition-colors text-white/80">Work</a>
+                <a href="#pricing" class="hover:text-[#60a5fa] transition-colors text-white/80">Pricing</a>
+                <a href="#contact" class="hover:text-[#60a5fa] transition-colors text-white/80">Contact</a>
             </nav>
 
             <div class="flex items-center gap-2 md:hidden">
-                <button id="themeToggleMobile" class="theme-toggle" aria-label="Activate dark mode">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                </button>
-                <button id="menuToggle" class="p-2 rounded-lg hover:bg-[#F1F5F9] dark:hover:bg-[#1E293B] transition" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <button id="menuToggle" class="p-2 rounded-lg hover:bg-[#1E293B] transition" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
@@ -324,412 +261,405 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="mobile-menu md:hidden glass border-t border-[#F1F5F9] dark:border-[#1E293B]" role="navigation" aria-label="Mobile navigation">
+        <div id="mobileMenu" class="mobile-menu md:hidden glass border-t border-[#1E293B]" role="navigation" aria-label="Mobile navigation">
             <div class="px-6 py-5 flex flex-col gap-4 text-sm font-medium">
-                <a href="#services" class="hover:text-[#2563EB] transition-colors py-1">Services</a>
-                <a href="#work" class="hover:text-[#2563EB] transition-colors py-1">Work</a>
-                <a href="#pricing" class="hover:text-[#2563EB] transition-colors py-1">Pricing</a>
-                <a href="#contact" class="hover:text-[#2563EB] transition-colors py-1">Contact</a>
+                <a href="#services" class="hover:text-[#60a5fa] transition-colors py-1 text-white/80">Services</a>
+                <a href="#work" class="hover:text-[#60a5fa] transition-colors py-1 text-white/80">Work</a>
+                <a href="#pricing" class="hover:text-[#60a5fa] transition-colors py-1 text-white/80">Pricing</a>
+                <a href="#contact" class="hover:text-[#60a5fa] transition-colors py-1 text-white/80">Contact</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-    <!-- ========== HERO ========== -->
-    <section id="hero" class="relative pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden" aria-labelledby="hero-heading">
-        <div class="gradient-blob w-[500px] h-[500px] bg-[#2563EB] top-[-15%] left-[-10%]"></div>
-        <div class="gradient-blob w-[400px] h-[400px] bg-[#38BDF8] bottom-[-10%] right-[-5%]"></div>
+        <!-- ========== HERO ========== -->
+        <section id="hero" class="relative pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden" aria-labelledby="hero-heading">
+            <div class="gradient-blob w-[500px] h-[500px] bg-[#2563EB] top-[-15%] left-[-10%]"></div>
+            <div class="gradient-blob w-[400px] h-[400px] bg-[#38BDF8] bottom-[-10%] right-[-5%]"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div>
-                    <h1 id="hero-heading" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08]">
-                        Elevating Businesses Through <span class="text-[#2563EB]">Exceptional</span> Web Experiences.
-                    </h1>
-                    <p class="text-lg md:text-xl text-[#475569] dark:text-white/60 mt-5 max-w-lg leading-relaxed">
-                        We build digital products that drive growth — from startups to global enterprises.
-                    </p>
-                    <div class="flex flex-wrap gap-4 mt-8">
-                        <a href="#contact" class="px-8 py-4 bg-[#2563EB] text-white rounded-2xl font-semibold hover:bg-[#1D4ED8] transition shadow-lg shadow-[#2563EB]/20">Get Started</a>
-                        <a href="#work" class="px-8 py-4 border border-[#E2E8F0] dark:border-[#1E293B] rounded-2xl font-medium hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition">View Our Work</a>
-                    </div>
-                    <div class="grid grid-cols-3 gap-4 sm:gap-6 mt-12">
-                        <div>
-                            <span class="text-2xl sm:text-3xl font-bold text-[#2563EB]">9+</span>
-                            <p class="text-xs sm:text-sm text-[#64748B] dark:text-white/40">Projects Delivered</p>
-                        </div>
-                        <div>
-                            <span class="text-2xl sm:text-3xl font-bold text-[#2563EB]">98%</span>
-                            <p class="text-xs sm:text-sm text-[#64748B] dark:text-white/40">Client Satisfaction</p>
-                        </div>
-                        <div>
-                            <span class="text-2xl sm:text-3xl font-bold text-[#2563EB]">24/7</span>
-                            <p class="text-xs sm:text-sm text-[#64748B] dark:text-white/40">Support</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative flex justify-center" aria-hidden="true">
-                    <div class="w-full max-w-md aspect-square rounded-3xl bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 backdrop-blur-sm border border-white/20 dark:border-white/5 shadow-2xl flex items-center justify-center p-6">
-                        <div class="grid grid-cols-2 gap-4 w-full">
-                            <div class="bg-white/80 dark:bg-[#0F172A]/80 p-4 rounded-2xl shadow-sm"><span class="block text-sm font-medium">SaaS</span><span class="text-xs text-[#64748B] dark:text-white/40">Launch ready</span></div>
-                            <div class="bg-white/80 dark:bg-[#0F172A]/80 p-4 rounded-2xl shadow-sm"><span class="block text-sm font-medium">E-commerce</span><span class="text-xs text-[#64748B] dark:text-white/40">Scalable</span></div>
-                            <div class="bg-white/80 dark:bg-[#0F172A]/80 p-4 rounded-2xl shadow-sm"><span class="block text-sm font-medium">UI/UX</span><span class="text-xs text-[#64748B] dark:text-white/40">Design</span></div>
-                            <div class="bg-white/80 dark:bg-[#0F172A]/80 p-4 rounded-2xl shadow-sm"><span class="block text-sm font-medium">API</span><span class="text-xs text-[#64748B] dark:text-white/40">Integrations</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== TRUSTED BY ========== -->
-    <!-- REPLACED with real, recognizable tech brands to build trust -->
-    <section class="py-10 border-y border-[#F1F5F9] dark:border-[#1E293B] section-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-            <p class="text-xs uppercase tracking-wider text-[#64748B] dark:text-white/40 font-semibold">Trusted by innovative teams worldwide</p>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-14 mt-5 opacity-60 grayscale">
-                <span class="trusted-logo">Google</span>
-                <span class="trusted-logo">Vercel</span>
-                <span class="trusted-logo">Kaltrix</span>
-                <span class="trusted-logo">Stripe</span>
-                <span class="trusted-logo">Supabase</span>
-                <span class="trusted-logo">Notion</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SERVICES ========== -->
-    <section id="services" class="py-20 md:py-28 reveal" aria-labelledby="services-heading">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="text-center max-w-2xl mx-auto">
-                <span class="text-[#2563EB] font-semibold text-xs uppercase tracking-wider">Services</span>
-                <h2 id="services-heading" class="text-3xl md:text-5xl font-bold mt-2">What we build</h2>
-                <p class="text-[#475569] dark:text-white/60 mt-3">End-to-end digital products that scale with your business.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                <div class="card-lift p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-card">
-                    <div class="service-icon" aria-hidden="true">WD</div>
-                    <h3 class="text-lg font-semibold mt-4">Website Development</h3>
-                    <p class="text-[#64748B] dark:text-white/50 text-sm mt-1.5">High-performance, responsive websites built with modern frameworks.</p>
-                </div>
-                <div class="card-lift p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-card">
-                    <div class="service-icon" aria-hidden="true">WA</div>
-                    <h3 class="text-lg font-semibold mt-4">Web Applications</h3>
-                    <p class="text-[#64748B] dark:text-white/50 text-sm mt-1.5">Complex SaaS, dashboards, and internal tools with robust architecture.</p>
-                </div>
-                <div class="card-lift p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-card">
-                    <div class="service-icon" aria-hidden="true">LP</div>
-                    <h3 class="text-lg font-semibold mt-4">Landing Pages</h3>
-                    <p class="text-[#64748B] dark:text-white/50 text-sm mt-1.5">Conversion-optimized pages that capture attention and drive action.</p>
-                </div>
-                <div class="card-lift p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-card">
-                    <div class="service-icon" aria-hidden="true">EC</div>
-                    <h3 class="text-lg font-semibold mt-4">E-commerce</h3>
-                    <p class="text-[#64748B] dark:text-white/50 text-sm mt-1.5">Full-featured online stores with seamless checkout and inventory.</p>
-                </div>
-                <div class="card-lift p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-card">
-                    <div class="service-icon" aria-hidden="true">UX</div>
-                    <h3 class="text-lg font-semibold mt-4">UI/UX Design</h3>
-                    <p class="text-[#64748B] dark:text-white/50 text-sm mt-1.5">Beautiful, intuitive interfaces designed with user-centered principles.</p>
-                </div>
-                <div class="card-lift p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-card">
-                    <div class="service-icon" aria-hidden="true">SM</div>
-                    <h3 class="text-lg font-semibold mt-4">SEO & Maintenance</h3>
-                    <p class="text-[#64748B] dark:text-white/50 text-sm mt-1.5">Ongoing optimization, security updates, and performance monitoring.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== WHY CHOOSE US ========== -->
-    <section class="py-20 section-bg" aria-labelledby="why-us-heading">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="text-center max-w-2xl mx-auto">
-                <span class="text-[#2563EB] font-semibold text-xs uppercase tracking-wider">Why us</span>
-                <h2 id="why-us-heading" class="text-3xl md:text-5xl font-bold mt-2">Built different</h2>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 mt-12">
-                <div class="p-4 rounded-xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] text-center shadow-sm"><span class="font-medium">Fast Delivery</span></div>
-                <div class="p-4 rounded-xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] text-center shadow-sm"><span class="font-medium">Modern Tech</span></div>
-                <div class="p-4 rounded-xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] text-center shadow-sm"><span class="font-medium">SEO Ready</span></div>
-                <div class="p-4 rounded-xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] text-center shadow-sm"><span class="font-medium">Responsive</span></div>
-                <div class="p-4 rounded-xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] text-center shadow-sm"><span class="font-medium">Secure</span></div>
-                <div class="p-4 rounded-xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] text-center shadow-sm"><span class="font-medium">Scalable</span></div>
-                <div class="p-4 rounded-xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] text-center shadow-sm"><span class="font-medium">Active Team Support</span></div>
-                <div class="p-4 rounded-xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] text-center shadow-sm"><span class="font-medium">24/7</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== PORTFOLIO ========== -->
-    <section id="work" class="py-20 md:py-28 reveal" aria-labelledby="portfolio-heading">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="text-center max-w-2xl mx-auto">
-                <span class="text-[#2563EB] font-semibold text-xs uppercase tracking-wider">Portfolio</span>
-                <h2 id="portfolio-heading" class="text-3xl md:text-5xl font-bold mt-2">Recent work</h2>
-                <p class="text-[#475569] dark:text-white/60 mt-3">our recent projects.</p> 
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                <!-- REPLACED placeholders with more descriptive project names. Images still need to be added. -->
-                <div class="rounded-2xl overflow-hidden border border-[#F1F5F9] dark:border-[#1E293B] bg-white dark:bg-[#0F172A] shadow-card hover:shadow-xl transition">
-                    <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#2563EB] font-medium">NeoBank Dashboard</div>
-                    <div class="p-4"><p class="font-semibold">Revenue Dashboard</p><p class="text-sm text-[#64748B] dark:text-white/50">React • Next.js • Tailwind</p></div>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-[#F1F5F9] dark:border-[#1E293B] bg-white dark:bg-[#0F172A] shadow-card hover:shadow-xl transition">
-                    <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#2563EB] font-medium">GreenLeaf Eco Store</div>
-                    <div class="p-4"><p class="font-semibold">chekerd shirts Store</p><p class="text-sm text-[#64748B] dark:text-white/50">Next.js • Paystack • Tailwind</p></div>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-[#F1F5F9] dark:border-[#1E293B] bg-white dark:bg-[#0F172A] shadow-card hover:shadow-xl transition">
-                    <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#2563EB] font-medium">TaskFlow SaaS</div>
-                    <div class="p-4"><p class="font-semibold">TaskFlow SaaS</p><p class="text-sm text-[#64748B] dark:text-white/50">React • Node • MYSQL</p></div>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-[#F1F5F9] dark:border-[#1E293B] bg-white dark:bg-[#0F172A] shadow-card hover:shadow-xl transition">
-                    <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#2563EB] font-medium">Artist Portfolio 2025</div>
-                    <div class="p-4"><p class="font-semibold">Professional Portfolio </p><p class="text-sm text-[#64748B] dark:text-white/50">HTML&CSS • Javascipt • GSAP</p></div>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-[#F1F5F9] dark:border-[#1E293B] bg-white dark:bg-[#0F172A] shadow-card hover:shadow-xl transition">
-                    <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#2563EB] font-medium">PulseFit Health App</div>
-                    <div class="p-4"><p class="font-semibold">Resturant Menu website</p><p class="text-sm text-[#64748B] dark:text-white/50">React • Next.js  • supabase</p></div>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-[#F1F5F9] dark:border-[#1E293B] bg-white dark:bg-[#0F172A] shadow-card hover:shadow-xl transition">
-                    <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#2563EB] font-medium">Velocity AI Landing</div>
-                    <div class="p-4"><p class="font-semibold">Velocity AI Landing</p><p class="text-sm text-[#64748B] dark:text-white/50">Next.js • Tailwind • Framer</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== PROCESS ========== -->
-    <section class="py-20 section-bg" aria-labelledby="process-heading">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <h2 id="process-heading" class="text-3xl md:text-5xl font-bold text-center">Our process</h2>
-            <p class="text-center text-[#475569] dark:text-white/60 mt-3 max-w-md mx-auto">From concept to launch, we've got you covered.</p>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">01</span><h3 class="text-lg font-semibold mt-1">Discovery</h3><p class="text-[#64748B] dark:text-white/50 text-sm">Understand goals, audience, and requirements.</p></div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">02</span><h3 class="text-lg font-semibold mt-1">Planning</h3><p class="text-[#64748B] dark:text-white/50 text-sm">Architecture, sitemaps, and technical strategy.</p></div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">03</span><h3 class="text-lg font-semibold mt-1">Design</h3><p class="text-[#64748B] dark:text-white/50 text-sm">Wireframes, visual design, and interactive prototypes.</p></div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">04</span><h3 class="text-lg font-semibold mt-1">Development</h3><p class="text-[#64748B] dark:text-white/50 text-sm">Agile development with regular check-ins.</p></div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">05</span><h3 class="text-lg font-semibold mt-1">Testing</h3><p class="text-[#64748B] dark:text-white/50 text-sm">Quality assurance, performance, and user testing.</p></div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">06</span><h3 class="text-lg font-semibold mt-1">Launch</h3><p class="text-[#64748B] dark:text-white/50 text-sm">Deployment, monitoring, and ongoing support.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== PRICING ========== -->
-    <section id="pricing" class="py-20 section-bg reveal" aria-labelledby="pricing-heading">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <h2 id="pricing-heading" class="text-3xl md:text-5xl font-bold text-center">Simple, transparent pricing</h2>
-            <p class="text-center text-[#475569] dark:text-white/60 mt-3 max-w-md mx-auto">Choose the plan that fits your needs.</p>
-            <div class="grid md:grid-cols-3 gap-6 mt-12">
-                <div class="p-8 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-card">
-                    <h3 class="text-xl font-bold">Starter</h3>
-                    <p class="text-4xl font-bold mt-2">₦149,000<span class="text-sm font-normal text-[#64748B]"></span></p>
-                    <p class="text-[#64748B] dark:text-white/50 mt-1 text-sm">Ideal for landing pages & small business sites</p>
-                    <ul class="mt-4 space-y-2 text-sm text-[#64748B] dark:text-white/50">
-                        <li>✅ 2-3 Pages</li>
-                        <li>✅ Responsive Design</li>
-                        <li>✅ Contact Form</li>
-                        <li>✅ Basic SEO</li>
-                        <li>✅ 2 Revisions</li>
-                    </ul>
-                    <a href="#contact" class="block text-center mt-6 py-3 rounded-xl border border-[#E2E8F0] dark:border-[#1E293B] hover:bg-[#2563EB] hover:text-white transition font-medium">Get started</a>
-                </div>
-                <div class="p-8 rounded-2xl bg-white dark:bg-[#0F172A] border-2 border-[#2563EB] shadow-2xl relative pricing-popular">
-                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2563EB] text-white text-xs px-4 py-1 rounded-full font-semibold">Most Popular</span>
-                    <h3 class="text-xl font-bold">Professional</h3>
-                    <p class="text-4xl font-bold mt-2">₦399,000<span class="text-sm font-normal text-[#64748B]"></span></p>
-                    <p class="text-[#64748B] dark:text-white/50 mt-1 text-sm">Best for business sites & custom web apps</p>
-                    <ul class="mt-4 space-y-2 text-sm text-[#64748B] dark:text-white/50">
-                        <li>✅ 5+ Pages</li>
-                        <li>✅ Custom UI/UX Design</li>
-                        <li>✅ CMS Integration</li>
-                        <li>✅ Advanced SEO</li>
-                        <li>✅ Unlimited Revisions</li>
-                        <li>✅ 1 Month Support</li>
-                    </ul>
-                    <a href="#contact" class="block text-center mt-6 py-3 rounded-xl bg-[#2563EB] text-white hover:bg-[#1D4ED8] transition font-medium">Get started</a>
-                </div>
-                <div class="p-8 rounded-2xl bg-white dark:bg-[#0F172A] border border-[#F1F5F9] dark:border-[#1E293B] shadow-card">
-                    <h3 class="text-xl font-bold">Enterprise</h3>
-                    <p class="text-4xl font-bold mt-2">Custom</p>
-                    <p class="text-[#64748B] dark:text-white/50 mt-1 text-sm">For large-scale projects & dedicated teams</p>
-                    <ul class="mt-4 space-y-2 text-sm text-[#64748B] dark:text-white/50">
-                        <li>✅ Everything in Pro</li>
-                        <li>✅ Custom Functionality</li>
-                        <li>✅ Dedicated PM</li>
-                        <li>✅ Priority Support 24/7</li>
-                        <li>✅ Custom SLA</li>
-                    </ul>
-                    <a href="#contact" class="block text-center mt-6 py-3 rounded-xl border border-[#E2E8F0] dark:border-[#1E293B] hover:bg-[#2563EB] hover:text-white transition font-medium">Contact us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FAQ ========== -->
-    <section class="py-20" aria-labelledby="faq-heading">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6">
-            <h2 id="faq-heading" class="text-3xl md:text-5xl font-bold text-center">Frequently Asked Questions</h2>
-            <div class="mt-12 space-y-3">
-                <!-- UPDATED with more professional, client-focused answers -->
-                <div class="border-b border-[#F1F5F9] dark:border-[#1E293B] pb-3">
-                    <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#2563EB] transition" data-target="faq1" aria-expanded="false">
-                        <span>How long does a typical project take?</span>
-                        <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
-                    </button>
-                    <div id="faq1" class="faq-answer text-[#475569] dark:text-white/60 text-sm pt-1" role="region">Timelines depend on the scope. A landing page may take 48-72 hours, while a complex web application can take 2-4 weeks. We'll give you a clear timeline after our discovery convo.</div>
-                </div>
-                <div class="border-b border-[#F1F5F9] dark:border-[#1E293B] pb-3">
-                    <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#2563EB] transition" data-target="faq2" aria-expanded="false">
-                        <span>Do you offer ongoing support after launch?</span>
-                        <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
-                    </button>
-                    <div id="faq2" class="faq-answer text-[#475569] dark:text-white/60 text-sm pt-1" role="region">Absolutely. We offer maintenance and support plans that include updates, security monitoring, content changes, and performance optimization. Our Professional plan includes 1 month of complimentary support.</div>
-                </div>
-                <div class="border-b border-[#F1F5F9] dark:border-[#1E293B] pb-3">
-                    <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#2563EB] transition" data-target="faq3" aria-expanded="false">
-                        <span>What technologies do you specialize in?</span>
-                        <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
-                    </button>
-                    <div id="faq3" class="faq-answer text-[#475569] dark:text-white/60 text-sm pt-1" role="region">Our core stack is React, Next.js, Node.js, and Tailwind CSS for the frontend. For backends, we use Node, Python, and PostgreSQL. We deploy on Vercel, Netlify, or AWS. We choose the best tech for your specific needs.</div>
-                </div>
-                <div class="border-b border-[#F1F5F9] dark:border-[#1E293B] pb-3">
-                    <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#2563EB] transition" data-target="faq4" aria-expanded="false">
-                        <span>Can you redesign my existing website?</span>
-                        <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
-                    </button>
-                    <div id="faq4" class="faq-answer text-[#475569] dark:text-white/60 text-sm pt-1" role="region">Yes, that's a common request. We can perform a full audit and modernize your site's design, performance, and SEO while preserving your existing content and brand equity.</div>
-                </div>
-                <div class="border-b border-[#F1F5F9] dark:border-[#1E293B] pb-3">
-                    <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#2563EB] transition" data-target="faq5" aria-expanded="false">
-                        <span>Do you handle hosting and domain setup?</span>
-                        <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
-                    </button>
-                    <div id="faq5" class="faq-answer text-[#475569] dark:text-white/60 text-sm pt-1" role="region">We manage the entire process, from purchasing a domain to configuring hosting on Vercel, GitLab, or AWS. We ensure your site is secure with an SSL certificate and is fast for visitors worldwide.</div>
-                </div>
-                <div class="border-b border-[#F1F5F9] dark:border-[#1E293B] pb-3">
-                    <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#2563EB] transition" data-target="faq6" aria-expanded="false">
-                        <span>Is SEO included in your projects?</span>
-                        <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
-                    </button>
-                    <div id="faq6" class="faq-answer text-[#475569] dark:text-white/60 text-sm pt-1" role="region">Yes, all our sites are built with a strong technical SEO foundation (meta tags, sitemaps, schema markup, fast load times). We also offer ongoing SEO services for keyword research, content strategy, and link building.</div>
-                </div>
-                <div class="border-b border-[#F1F5F9] dark:border-[#1E293B] pb-3">
-                    <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#2563EB] transition" data-target="faq7" aria-expanded="false">
-                        <span>What is your payment structure?</span>
-                        <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
-                    </button>
-                    <div id="faq7" class="faq-answer text-[#475569] dark:text-white/60 text-sm pt-1" role="region">Typically, we work with a 50% deposit to start the project, 25% at a midway milestone, and the final 25% upon launch. For larger projects, we can set up a custom milestone schedule.</div>
-                </div>
-                <div class="border-b border-[#F1F5F9] dark:border-[#1E293B] pb-3">
-                    <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#2563EB] transition" data-target="faq8" aria-expanded="false">
-                        <span>How do we get started?</span>
-                        <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
-                    </button>
-                    <div id="faq8" class="faq-answer text-[#475569] dark:text-white/60 text-sm pt-1" role="region">Simply fill out the contact form below. We'll schedule a free 30-minute discovery call to understand your goals, answer your questions, and provide a tailored proposal.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section id="contact" class="py-20 section-bg reveal" aria-labelledby="contact-heading">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
-            <h2 id="contact-heading" class="text-3xl md:text-5xl font-bold text-center">Let's build something great</h2>
-            <p class="text-center text-[#475569] dark:text-white/60 mt-3">Tell us about your project and we'll get back to you within 24 hours.</p>
-            
-            <!-- CONNECTED FORM: Uses Formspree as an example. Replace 'YOUR_FORM_ID' with a real one. -->
-            <form id="contact-form" class="mt-12 bg-white dark:bg-[#0F172A] p-6 sm:p-8 rounded-3xl shadow-soft border border-[#F1F5F9] dark:border-[#1E293B]" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="grid sm:grid-cols-2 gap-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     <div>
-                        <label for="full-name" class="sr-only">Full name</label>
-                        <input type="text" id="full-name" name="name" placeholder="Full name *" class="w-full p-4 rounded-xl border border-[#E2E8F0] dark:border-[#1E293B] bg-white dark:bg-[#020617] text-[#111827] dark:text-white" required />
+                        <h1 id="hero-heading" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08]">
+                            Elevating Businesses Through <span class="text-[#2563EB]">Exceptional</span> Web Experiences.
+                        </h1>
+                        <p class="text-lg md:text-xl text-white/60 mt-5 max-w-lg leading-relaxed">
+                            We build digital products that drive growth — from startups to global enterprises.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mt-8">
+                            <a href="#contact" class="px-8 py-4 bg-[#2563EB] text-white rounded-2xl font-semibold hover:bg-[#1D4ED8] transition shadow-lg shadow-[#2563EB]/20">Get Started</a>
+                            <a href="#work" class="px-8 py-4 border border-[#1E293B] rounded-2xl font-medium hover:bg-[#0F172A] transition text-white/80">View Our Work</a>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 sm:gap-6 mt-12">
+                            <div>
+                                <span class="text-2xl sm:text-3xl font-bold text-[#2563EB]">9+</span>
+                                <p class="text-xs sm:text-sm text-white/40">Projects Delivered</p>
+                            </div>
+                            <div>
+                                <span class="text-2xl sm:text-3xl font-bold text-[#2563EB]">98%</span>
+                                <p class="text-xs sm:text-sm text-white/40">Client Satisfaction</p>
+                            </div>
+                            <div>
+                                <span class="text-2xl sm:text-3xl font-bold text-[#2563EB]">24/7</span>
+                                <p class="text-xs sm:text-sm text-white/40">Support</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <label for="email-address" class="sr-only">Email address</label>
-                        <input type="email" id="email-address" name="email" placeholder="Email address *" class="w-full p-4 rounded-xl border border-[#E2E8F0] dark:border-[#1E293B] bg-white dark:bg-[#020617] text-[#111827] dark:text-white" required />
+
+                    <div class="relative flex justify-center" aria-hidden="true">
+                        <div class="w-full max-w-md aspect-square rounded-3xl bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 backdrop-blur-sm border border-white/5 shadow-2xl flex items-center justify-center p-6">
+                            <div class="grid grid-cols-2 gap-4 w-full">
+                                <div class="bg-[#0F172A]/80 p-4 rounded-2xl shadow-sm border border-white/5"><span class="block text-sm font-medium text-white">SaaS</span><span class="text-xs text-white/40">Launch ready</span></div>
+                                <div class="bg-[#0F172A]/80 p-4 rounded-2xl shadow-sm border border-white/5"><span class="block text-sm font-medium text-white">E-commerce</span><span class="text-xs text-white/40">Scalable</span></div>
+                                <div class="bg-[#0F172A]/80 p-4 rounded-2xl shadow-sm border border-white/5"><span class="block text-sm font-medium text-white">UI/UX</span><span class="text-xs text-white/40">Design</span></div>
+                                <div class="bg-[#0F172A]/80 p-4 rounded-2xl shadow-sm border border-white/5"><span class="block text-sm font-medium text-white">API</span><span class="text-xs text-white/40">Integrations</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="mt-4">
-                    <label for="company-name" class="sr-only">Company name</label>
-                    <input type="text" id="company-name" name="company" placeholder="Company name" class="w-full p-4 rounded-xl border border-[#E2E8F0] dark:border-[#1E293B] bg-white dark:bg-[#020617] text-[#111827] dark:text-white" />
+            </div>
+        </section>
+
+        <!-- ========== TRUSTED BY ========== -->
+        <section class="py-10 border-y border-[#1E293B] section-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+                <p class="text-xs uppercase tracking-wider text-white/40 font-semibold">Trusted by innovative teams worldwide</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-14 mt-5 opacity-60 grayscale">
+                    <span class="trusted-logo">Google</span>
+                    <span class="trusted-logo">Vercel</span>
+                    <span class="trusted-logo">Kaltrix</span>
+                    <span class="trusted-logo">Stripe</span>
+                    <span class="trusted-logo">Supabase</span>
+                    <span class="trusted-logo">Notion</span>
                 </div>
+            </div>
+        </section>
+
+        <!-- ========== SERVICES ========== -->
+        <section id="services" class="py-20 md:py-28 reveal" aria-labelledby="services-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="text-center max-w-2xl mx-auto">
+                    <span class="text-[#2563EB] font-semibold text-xs uppercase tracking-wider">Services</span>
+                    <h2 id="services-heading" class="text-3xl md:text-5xl font-bold mt-2">What we build</h2>
+                    <p class="text-white/60 mt-3">End-to-end digital products that scale with your business.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                    <div class="card-lift p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-card">
+                        <div class="service-icon" aria-hidden="true">WD</div>
+                        <h3 class="text-lg font-semibold mt-4 text-white">Website Development</h3>
+                        <p class="text-white/50 text-sm mt-1.5">High-performance, responsive websites built with modern frameworks.</p>
+                    </div>
+                    <div class="card-lift p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-card">
+                        <div class="service-icon" aria-hidden="true">WA</div>
+                        <h3 class="text-lg font-semibold mt-4 text-white">Web Applications</h3>
+                        <p class="text-white/50 text-sm mt-1.5">Complex SaaS, dashboards, and internal tools with robust architecture.</p>
+                    </div>
+                    <div class="card-lift p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-card">
+                        <div class="service-icon" aria-hidden="true">LP</div>
+                        <h3 class="text-lg font-semibold mt-4 text-white">Landing Pages</h3>
+                        <p class="text-white/50 text-sm mt-1.5">Conversion-optimized pages that capture attention and drive action.</p>
+                    </div>
+                    <div class="card-lift p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-card">
+                        <div class="service-icon" aria-hidden="true">EC</div>
+                        <h3 class="text-lg font-semibold mt-4 text-white">E-commerce</h3>
+                        <p class="text-white/50 text-sm mt-1.5">Full-featured online stores with seamless checkout and inventory.</p>
+                    </div>
+                    <div class="card-lift p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-card">
+                        <div class="service-icon" aria-hidden="true">UX</div>
+                        <h3 class="text-lg font-semibold mt-4 text-white">UI/UX Design</h3>
+                        <p class="text-white/50 text-sm mt-1.5">Beautiful, intuitive interfaces designed with user-centered principles.</p>
+                    </div>
+                    <div class="card-lift p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-card">
+                        <div class="service-icon" aria-hidden="true">SM</div>
+                        <h3 class="text-lg font-semibold mt-4 text-white">SEO & Maintenance</h3>
+                        <p class="text-white/50 text-sm mt-1.5">Ongoing optimization, security updates, and performance monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== WHY CHOOSE US ========== -->
+        <section class="py-20 section-bg" aria-labelledby="why-us-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="text-center max-w-2xl mx-auto">
+                    <span class="text-[#2563EB] font-semibold text-xs uppercase tracking-wider">Why us</span>
+                    <h2 id="why-us-heading" class="text-3xl md:text-5xl font-bold mt-2">Built different</h2>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 mt-12">
+                    <div class="p-4 rounded-xl bg-[#0F172A] border border-[#1E293B] text-center shadow-sm"><span class="font-medium text-white">Fast Delivery</span></div>
+                    <div class="p-4 rounded-xl bg-[#0F172A] border border-[#1E293B] text-center shadow-sm"><span class="font-medium text-white">Modern Tech</span></div>
+                    <div class="p-4 rounded-xl bg-[#0F172A] border border-[#1E293B] text-center shadow-sm"><span class="font-medium text-white">SEO Ready</span></div>
+                    <div class="p-4 rounded-xl bg-[#0F172A] border border-[#1E293B] text-center shadow-sm"><span class="font-medium text-white">Responsive</span></div>
+                    <div class="p-4 rounded-xl bg-[#0F172A] border border-[#1E293B] text-center shadow-sm"><span class="font-medium text-white">Secure</span></div>
+                    <div class="p-4 rounded-xl bg-[#0F172A] border border-[#1E293B] text-center shadow-sm"><span class="font-medium text-white">Scalable</span></div>
+                    <div class="p-4 rounded-xl bg-[#0F172A] border border-[#1E293B] text-center shadow-sm"><span class="font-medium text-white">Active Team Support</span></div>
+                    <div class="p-4 rounded-xl bg-[#0F172A] border border-[#1E293B] text-center shadow-sm"><span class="font-medium text-white">24/7</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PORTFOLIO ========== -->
+        <section id="work" class="py-20 md:py-28 reveal" aria-labelledby="portfolio-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="text-center max-w-2xl mx-auto">
+                    <span class="text-[#2563EB] font-semibold text-xs uppercase tracking-wider">Portfolio</span>
+                    <h2 id="portfolio-heading" class="text-3xl md:text-5xl font-bold mt-2">Recent work</h2>
+                    <p class="text-white/60 mt-3">our recent projects.</p> 
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                    <div class="rounded-2xl overflow-hidden border border-[#1E293B] bg-[#0F172A] shadow-card hover:shadow-xl transition">
+                        <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#60a5fa] font-medium">NeoBank Dashboard</div>
+                        <div class="p-4"><p class="font-semibold text-white">Revenue Dashboard</p><p class="text-sm text-white/50">React • Next.js • Tailwind</p></div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-[#1E293B] bg-[#0F172A] shadow-card hover:shadow-xl transition">
+                        <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#60a5fa] font-medium">GreenLeaf Eco Store</div>
+                        <div class="p-4"><p class="font-semibold text-white">chekerd shirts Store</p><p class="text-sm text-white/50">Next.js • Paystack • Tailwind</p></div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-[#1E293B] bg-[#0F172A] shadow-card hover:shadow-xl transition">
+                        <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#60a5fa] font-medium">TaskFlow SaaS</div>
+                        <div class="p-4"><p class="font-semibold text-white">TaskFlow SaaS</p><p class="text-sm text-white/50">React • Node • MYSQL</p></div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-[#1E293B] bg-[#0F172A] shadow-card hover:shadow-xl transition">
+                        <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#60a5fa] font-medium">Artist Portfolio 2025</div>
+                        <div class="p-4"><p class="font-semibold text-white">Professional Portfolio </p><p class="text-sm text-white/50">HTML&CSS • Javascipt • GSAP</p></div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-[#1E293B] bg-[#0F172A] shadow-card hover:shadow-xl transition">
+                        <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#60a5fa] font-medium">PulseFit Health App</div>
+                        <div class="p-4"><p class="font-semibold text-white">Resturant Menu website</p><p class="text-sm text-white/50">React • Next.js  • supabase</p></div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-[#1E293B] bg-[#0F172A] shadow-card hover:shadow-xl transition">
+                        <div class="aspect-video bg-gradient-to-br from-[#2563EB]/10 to-[#38BDF8]/10 flex items-center justify-center text-[#60a5fa] font-medium">Velocity AI Landing</div>
+                        <div class="p-4"><p class="font-semibold text-white">Velocity AI Landing</p><p class="text-sm text-white/50">Next.js • Tailwind • Framer</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PROCESS ========== -->
+        <section class="py-20 section-bg" aria-labelledby="process-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <h2 id="process-heading" class="text-3xl md:text-5xl font-bold text-center">Our process</h2>
+                <p class="text-center text-white/60 mt-3 max-w-md mx-auto">From concept to launch, we've got you covered.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                    <div class="p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">01</span><h3 class="text-lg font-semibold mt-1 text-white">Discovery</h3><p class="text-white/50 text-sm">Understand goals, audience, and requirements.</p></div>
+                    <div class="p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">02</span><h3 class="text-lg font-semibold mt-1 text-white">Planning</h3><p class="text-white/50 text-sm">Architecture, sitemaps, and technical strategy.</p></div>
+                    <div class="p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">03</span><h3 class="text-lg font-semibold mt-1 text-white">Design</h3><p class="text-white/50 text-sm">Wireframes, visual design, and interactive prototypes.</p></div>
+                    <div class="p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">04</span><h3 class="text-lg font-semibold mt-1 text-white">Development</h3><p class="text-white/50 text-sm">Agile development with regular check-ins.</p></div>
+                    <div class="p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">05</span><h3 class="text-lg font-semibold mt-1 text-white">Testing</h3><p class="text-white/50 text-sm">Quality assurance, performance, and user testing.</p></div>
+                    <div class="p-6 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-soft"><span class="text-[#2563EB] font-bold text-2xl" aria-hidden="true">06</span><h3 class="text-lg font-semibold mt-1 text-white">Launch</h3><p class="text-white/50 text-sm">Deployment, monitoring, and ongoing support.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PRICING ========== -->
+        <section id="pricing" class="py-20 section-bg reveal" aria-labelledby="pricing-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <h2 id="pricing-heading" class="text-3xl md:text-5xl font-bold text-center">Simple, transparent pricing</h2>
+                <p class="text-center text-white/60 mt-3 max-w-md mx-auto">Choose the plan that fits your needs.</p>
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    <div class="p-8 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-card">
+                        <h3 class="text-xl font-bold text-white">Starter</h3>
+                        <p class="text-4xl font-bold mt-2 text-white">₦149,000</p>
+                        <p class="text-white/50 mt-1 text-sm">Ideal for landing pages & small business sites</p>
+                        <ul class="mt-4 space-y-2 text-sm text-white/50">
+                            <li>✅ 2-3 Pages</li>
+                            <li>✅ Responsive Design</li>
+                            <li>✅ Contact Form</li>
+                            <li>✅ Basic SEO</li>
+                            <li>✅ 2 Revisions</li>
+                        </ul>
+                        <a href="#contact" class="block text-center mt-6 py-3 rounded-xl border border-[#1E293B] hover:bg-[#2563EB] hover:text-white transition font-medium text-white/80">Get started</a>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-[#0F172A] border-2 border-[#2563EB] shadow-2xl relative pricing-popular">
+                        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2563EB] text-white text-xs px-4 py-1 rounded-full font-semibold">Most Popular</span>
+                        <h3 class="text-xl font-bold text-white">Professional</h3>
+                        <p class="text-4xl font-bold mt-2 text-white">₦399,000</p>
+                        <p class="text-white/50 mt-1 text-sm">Best for business sites & custom web apps</p>
+                        <ul class="mt-4 space-y-2 text-sm text-white/50">
+                            <li>✅ 5+ Pages</li>
+                            <li>✅ Custom UI/UX Design</li>
+                            <li>✅ CMS Integration</li>
+                            <li>✅ Advanced SEO</li>
+                            <li>✅ Unlimited Revisions</li>
+                            <li>✅ 1 Month Support</li>
+                        </ul>
+                        <a href="#contact" class="block text-center mt-6 py-3 rounded-xl bg-[#2563EB] text-white hover:bg-[#1D4ED8] transition font-medium">Get started</a>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-[#0F172A] border border-[#1E293B] shadow-card">
+                        <h3 class="text-xl font-bold text-white">Enterprise</h3>
+                        <p class="text-4xl font-bold mt-2 text-white">Custom</p>
+                        <p class="text-white/50 mt-1 text-sm">For large-scale projects & dedicated teams</p>
+                        <ul class="mt-4 space-y-2 text-sm text-white/50">
+                            <li>✅ Everything in Pro</li>
+                            <li>✅ Custom Functionality</li>
+                            <li>✅ Dedicated PM</li>
+                            <li>✅ Priority Support 24/7</li>
+                            <li>✅ Custom SLA</li>
+                        </ul>
+                        <a href="#contact" class="block text-center mt-6 py-3 rounded-xl border border-[#1E293B] hover:bg-[#2563EB] hover:text-white transition font-medium text-white/80">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ ========== -->
+        <section class="py-20" aria-labelledby="faq-heading">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6">
+                <h2 id="faq-heading" class="text-3xl md:text-5xl font-bold text-center">Frequently Asked Questions</h2>
+                <div class="mt-12 space-y-3">
+                    <div class="border-b border-[#1E293B] pb-3">
+                        <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#60a5fa] transition text-white" data-target="faq1" aria-expanded="false">
+                            <span>How long does a typical project take?</span>
+                            <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq1" class="faq-answer text-white/60 text-sm pt-1" role="region">Timelines depend on the scope. A landing page may take 48-72 hours, while a complex web application can take 2-4 weeks. We'll give you a clear timeline after our discovery convo.</div>
+                    </div>
+                    <div class="border-b border-[#1E293B] pb-3">
+                        <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#60a5fa] transition text-white" data-target="faq2" aria-expanded="false">
+                            <span>Do you offer ongoing support after launch?</span>
+                            <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq2" class="faq-answer text-white/60 text-sm pt-1" role="region">Absolutely. We offer maintenance and support plans that include updates, security monitoring, content changes, and performance optimization. Our Professional plan includes 1 month of complimentary support.</div>
+                    </div>
+                    <div class="border-b border-[#1E293B] pb-3">
+                        <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#60a5fa] transition text-white" data-target="faq3" aria-expanded="false">
+                            <span>What technologies do you specialize in?</span>
+                            <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq3" class="faq-answer text-white/60 text-sm pt-1" role="region">Our core stack is React, Next.js, Node.js, and Tailwind CSS for the frontend. For backends, we use Node, Python, and PostgreSQL. We deploy on Vercel, Netlify, or AWS. We choose the best tech for your specific needs.</div>
+                    </div>
+                    <div class="border-b border-[#1E293B] pb-3">
+                        <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#60a5fa] transition text-white" data-target="faq4" aria-expanded="false">
+                            <span>Can you redesign my existing website?</span>
+                            <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq4" class="faq-answer text-white/60 text-sm pt-1" role="region">Yes, that's a common request. We can perform a full audit and modernize your site's design, performance, and SEO while preserving your existing content and brand equity.</div>
+                    </div>
+                    <div class="border-b border-[#1E293B] pb-3">
+                        <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#60a5fa] transition text-white" data-target="faq5" aria-expanded="false">
+                            <span>Do you handle hosting and domain setup?</span>
+                            <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq5" class="faq-answer text-white/60 text-sm pt-1" role="region">We manage the entire process, from purchasing a domain to configuring hosting on Vercel, GitLab, or AWS. We ensure your site is secure with an SSL certificate and is fast for visitors worldwide.</div>
+                    </div>
+                    <div class="border-b border-[#1E293B] pb-3">
+                        <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#60a5fa] transition text-white" data-target="faq6" aria-expanded="false">
+                            <span>Is SEO included in your projects?</span>
+                            <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq6" class="faq-answer text-white/60 text-sm pt-1" role="region">Yes, all our sites are built with a strong technical SEO foundation (meta tags, sitemaps, schema markup, fast load times). We also offer ongoing SEO services for keyword research, content strategy, and link building.</div>
+                    </div>
+                    <div class="border-b border-[#1E293B] pb-3">
+                        <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#60a5fa] transition text-white" data-target="faq7" aria-expanded="false">
+                            <span>What is your payment structure?</span>
+                            <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq7" class="faq-answer text-white/60 text-sm pt-1" role="region">Typically, we work with a 50% deposit to start the project, 25% at a midway milestone, and the final 25% upon launch. For larger projects, we can set up a custom milestone schedule.</div>
+                    </div>
+                    <div class="border-b border-[#1E293B] pb-3">
+                        <button class="faq-toggle flex justify-between w-full text-left font-medium py-2 hover:text-[#60a5fa] transition text-white" data-target="faq8" aria-expanded="false">
+                            <span>How do we get started?</span>
+                            <span class="text-[#2563EB] text-xl" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq8" class="faq-answer text-white/60 text-sm pt-1" role="region">Simply fill out the contact form below. We'll schedule a free 30-minute discovery call to understand your goals, answer your questions, and provide a tailored proposal.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT ========== -->
+        <section id="contact" class="py-20 section-bg reveal" aria-labelledby="contact-heading">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <h2 id="contact-heading" class="text-3xl md:text-5xl font-bold text-center">Let's build something great</h2>
+                <p class="text-center text-white/60 mt-3">Tell us about your project and we'll get back to you within 24 hours.</p>
                 
-                <div class="mt-4">
-                    <label for="budget-range" class="sr-only">Budget range</label>
-                    <select id="budget-range" name="budget" class="w-full p-4 rounded-xl border border-[#E2E8F0] dark:border-[#1E293B] bg-white dark:bg-[#020617] text-[#111827] dark:text-white appearance-none">
-                        <option value="" disabled selected>Budget range *</option>
-                        <option value="starter">₦149,000 – Starter</option>
-                        <option value="professional">₦399,000 – Professional</option>
-                        <option value="enterprise">Custom – Enterprise</option>
-                        <option value="other">Other / Not sure</option>
-                    </select>
-                </div>
+                <form id="contact-form" class="mt-12 bg-[#0F172A] p-6 sm:p-8 rounded-3xl shadow-soft border border-[#1E293B]" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="full-name" class="sr-only">Full name</label>
+                            <input type="text" id="full-name" name="name" placeholder="Full name *" class="w-full p-4 rounded-xl border border-[#1E293B] bg-[#020617] text-white" required />
+                        </div>
+                        <div>
+                            <label for="email-address" class="sr-only">Email address</label>
+                            <input type="email" id="email-address" name="email" placeholder="Email address *" class="w-full p-4 rounded-xl border border-[#1E293B] bg-[#020617] text-white" required />
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label for="company-name" class="sr-only">Company name</label>
+                        <input type="text" id="company-name" name="company" placeholder="Company name" class="w-full p-4 rounded-xl border border-[#1E293B] bg-[#020617] text-white" />
+                    </div>
+                    
+                    <div class="mt-4">
+                        <label for="budget-range" class="sr-only">Budget range</label>
+                        <select id="budget-range" name="budget" class="w-full p-4 rounded-xl border border-[#1E293B] bg-[#020617] text-white appearance-none">
+                            <option value="" disabled selected>Budget range *</option>
+                            <option value="starter">₦149,000 – Starter</option>
+                            <option value="professional">₦399,000 – Professional</option>
+                            <option value="enterprise">Custom – Enterprise</option>
+                            <option value="other">Other / Not sure</option>
+                        </select>
+                    </div>
 
-                <div class="mt-4">
-                    <label for="project-details" class="sr-only">Project details</label>
-                    <textarea id="project-details" name="message" rows="4" placeholder="Tell us about your project... *" class="w-full p-4 rounded-xl border border-[#E2E8F0] dark:border-[#1E293B] bg-white dark:bg-[#020617] text-[#111827] dark:text-white resize-y" required></textarea>
-                </div>
+                    <div class="mt-4">
+                        <label for="project-details" class="sr-only">Project details</label>
+                        <textarea id="project-details" name="message" rows="4" placeholder="Tell us about your project... *" class="w-full p-4 rounded-xl border border-[#1E293B] bg-[#020617] text-white resize-y" required></textarea>
+                    </div>
 
-                <!-- Hidden field for Formspree or similar services -->
-                <input type="hidden" name="_subject" value="New Project Inquiry from Elevate Digitals">
-                <input type="text" name="_gotcha" style="display:none">
+                    <input type="hidden" name="_subject" value="New Project Inquiry from Elevate Digitals">
+                    <input type="text" name="_gotcha" style="display:none">
 
-                <button type="submit" id="form-submit-btn" class="w-full mt-6 py-4 bg-[#2563EB] text-white rounded-2xl font-semibold hover:bg-[#1D4ED8] transition shadow-lg shadow-[#2563EB]/20 flex items-center justify-center">
-                    <span class="btn-text">Send message →</span>
-                    <span class="btn-loader hidden" aria-hidden="true">
-                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Sending...
-                    </span>
-                </button>
-                <div id="form-status" class="form-status" role="alert"></div>
-            </form>
-        </div>
-    </section>
+                    <button type="submit" id="form-submit-btn" class="w-full mt-6 py-4 bg-[#2563EB] text-white rounded-2xl font-semibold hover:bg-[#1D4ED8] transition shadow-lg shadow-[#2563EB]/20 flex items-center justify-center">
+                        <span class="btn-text">Send message →</span>
+                        <span class="btn-loader hidden" aria-hidden="true">
+                            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            Sending...
+                        </span>
+                    </button>
+                    <div id="form-status" class="form-status" role="alert"></div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <!-- ========== FOOTER ========== -->
-    <footer class="py-12 border-t border-[#F1F5F9] dark:border-[#1E293B] bg-white dark:bg-[#020617]" role="contentinfo">
+    <footer class="py-12 border-t border-[#1E293B] bg-[#020617]" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-                <!-- FIXED BRANDING in footer -->
                 <span class="text-2xl font-bold text-[#2563EB]">Elevate</span>
-                <span class="text-sm font-medium text-[#0F172A] dark:text-white/80 ml-1">Digitals</span>
-                <p class="text-sm text-[#64748B] dark:text-white/40 mt-2 max-w-xs">Digital experiences that elevate your business.</p>
+                <span class="text-sm font-medium text-white/80 ml-1">Digitals</span>
+                <p class="text-sm text-white/40 mt-2 max-w-xs">Digital experiences that elevate your business.</p>
             </div>
             <div>
-                <h2 class="font-semibold text-base">Services</h2>
-                <ul class="text-sm text-[#64748B] dark:text-white/40 mt-2 space-y-1.5">
-                    <!-- REPLACED '#' with actual section links or placeholder pages -->
-                    <li><a href="#services" class="hover:text-[#2563EB] transition">Web Development</a></li>
-                    <li><a href="#services" class="hover:text-[#2563EB] transition">UI/UX Design</a></li>
-                    <li><a href="#services" class="hover:text-[#2563EB] transition">E-commerce</a></li>
+                <h2 class="font-semibold text-base text-white">Services</h2>
+                <ul class="text-sm text-white/40 mt-2 space-y-1.5">
+                    <li><a href="#services" class="hover:text-[#60a5fa] transition">Web Development</a></li>
+                    <li><a href="#services" class="hover:text-[#60a5fa] transition">UI/UX Design</a></li>
+                    <li><a href="#services" class="hover:text-[#60a5fa] transition">E-commerce</a></li>
                 </ul>
             </div>
             <div>
-                <h2 class="font-semibold text-base">Company</h2>
-                <ul class="text-sm text-[#64748B] dark:text-white/40 mt-2 space-y-1.5">
-                    <li><a href="#hero" class="hover:text-[#2563EB] transition">About</a></li>
-                    <li><a href="#contact" class="hover:text-[#2563EB] transition">Contact</a></li>
-                    <li><a href="/privacy-policy" class="hover:text-[#2563EB] transition">Privacy Policy</a></li> <!-- Link to real page -->
+                <h2 class="font-semibold text-base text-white">Company</h2>
+                <ul class="text-sm text-white/40 mt-2 space-y-1.5">
+                    <li><a href="#hero" class="hover:text-[#60a5fa] transition">About</a></li>
+                    <li><a href="#contact" class="hover:text-[#60a5fa] transition">Contact</a></li>
+                    <li><a href="/privacy-policy" class="hover:text-[#60a5fa] transition">Privacy Policy</a></li>
                 </ul>
             </div>
             <div>
-                <h2 class="font-semibold text-base">Connect</h2>
+                <h2 class="font-semibold text-base text-white">Connect</h2>
                 <div class="flex gap-4 mt-3">
-                    <a href="#" aria-label="Elevate Digitals on Twitter" class="text-[#64748B] hover:text-[#2563EB] transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-                    <a href="#" aria-label="Elevate Digitals on LinkedIn" class="text-[#64748B] hover:text-[#2563EB] transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-                    <a href="#" aria-label="Elevate Digitals on GitHub" class="text-[#64748B] hover:text-[#2563EB] transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.3-.535-1.52.117-3.16 0 0 1.008-.322 3.3 1.23.96-.267 1.98-.399 3-.399s2.04.132 3 .399c2.292-1.552 3.3-1.23 3.3-1.23.652 1.64.24 2.86.118 3.16.768.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.476 5.92.43.37.824 1.102.824 2.22 0 1.602-.015 2.894-.015 3.287 0 .322.216.694.825.577C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                    <a href="#" aria-label="Elevate Digitals on Twitter" class="text-white/40 hover:text-[#60a5fa] transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="#" aria-label="Elevate Digitals on LinkedIn" class="text-white/40 hover:text-[#60a5fa] transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    <a href="#" aria-label="Elevate Digitals on GitHub" class="text-white/40 hover:text-[#60a5fa] transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.3-.535-1.52.117-3.16 0 0 1.008-.322 3.3 1.23.96-.267 1.98-.399 3-.399s2.04.132 3 .399c2.292-1.552 3.3-1.23 3.3-1.23.652 1.64.24 2.86.118 3.16.768.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.476 5.92.43.37.824 1.102.824 2.22 0 1.602-.015 2.894-.015 3.287 0 .322.216.694.825.577C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 mt-8 pt-6 border-t border-[#F1F5F9] dark:border-[#1E293B] text-sm text-[#64748B] dark:text-white/40 text-center">
-            © <span id="current-year"></span> Elevate Digitals. All rights reserved. | <a href="/privacy-policy" class="hover:text-[#2563EB] transition">Privacy Policy</a> | <a href="/terms-of-service" class="hover:text-[#2563EB] transition">Terms of Service</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 mt-8 pt-6 border-t border-[#1E293B] text-sm text-white/40 text-center">
+            © <span id="current-year"></span> Elevate Digitals. All rights reserved. | <a href="/privacy-policy" class="hover:text-[#60a5fa] transition">Privacy Policy</a> | <a href="/terms-of-service" class="hover:text-[#60a5fa] transition">Terms of Service</a>
         </div>
     </footer>
 
@@ -740,46 +670,8 @@
         (function() {
             'use strict';
 
-            // --- Set current year in footer ---
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
-            // === Dark Mode ===
-            const toggleDesktop = document.getElementById('themeToggleDesktop');
-            const toggleMobile = document.getElementById('themeToggleMobile');
-            const html = document.documentElement;
-
-            function setDark(isDark) {
-                if (isDark) {
-                    html.classList.add('dark');
-                    localStorage.setItem('dark', 'true');
-                    toggleDesktop.setAttribute('aria-label', 'Activate light mode');
-                    toggleMobile.setAttribute('aria-label', 'Activate light mode');
-                } else {
-                    html.classList.remove('dark');
-                    localStorage.setItem('dark', 'false');
-                    toggleDesktop.setAttribute('aria-label', 'Activate dark mode');
-                    toggleMobile.setAttribute('aria-label', 'Activate dark mode');
-                }
-            }
-
-            function toggleDark() {
-                setDark(!html.classList.contains('dark'));
-            }
-
-            if (localStorage.getItem('dark') === 'true') {
-                setDark(true);
-            } else if (localStorage.getItem('dark') === 'false') {
-                setDark(false);
-            } else {
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    setDark(true);
-                }
-            }
-
-            toggleDesktop.addEventListener('click', toggleDark);
-            toggleMobile.addEventListener('click', toggleDark);
-
-            // === Mobile Menu ===
             const menuToggle = document.getElementById('menuToggle');
             const mobileMenu = document.getElementById('mobileMenu');
 
@@ -806,7 +698,6 @@
                 });
             });
 
-            // === Back to Top ===
             const backBtn = document.getElementById('backToTop');
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 500) {
@@ -819,7 +710,6 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // === Nav blur on scroll ===
             const nav = document.getElementById('navbar');
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 20) {
@@ -829,7 +719,6 @@
                 }
             });
 
-            // === Scroll Reveal ===
             const revealElements = document.querySelectorAll('.reveal');
             const revealObserver = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
@@ -851,7 +740,6 @@
                 });
             }, 100);
 
-            // === FAQ Accordion ===
             const faqToggles = document.querySelectorAll('.faq-toggle');
             faqToggles.forEach(function(btn) {
                 btn.addEventListener('click', function() {
@@ -859,7 +747,6 @@
                     const answer = document.getElementById(targetId);
                     const isOpen = answer.classList.contains('open');
 
-                    // Close all
                     document.querySelectorAll('.faq-answer').forEach(function(el) {
                         el.classList.remove('open');
                     });
@@ -868,7 +755,6 @@
                         el.querySelector('span:last-child').textContent = '+';
                     });
 
-                    // Open the clicked one if it was closed
                     if (!isOpen) {
                         answer.classList.add('open');
                         this.setAttribute('aria-expanded', 'true');
@@ -877,7 +763,6 @@
                 });
             });
 
-            // === Contact Form Handling (for Formspree or similar) ===
             const form = document.getElementById('contact-form');
             const statusDiv = document.getElementById('form-status');
             const submitBtn = document.getElementById('form-submit-btn');
@@ -885,22 +770,11 @@
             const btnLoader = submitBtn.querySelector('.btn-loader');
 
             form.addEventListener('submit', function(event) {
-                // We are letting the form submit to Formspree naturally.
-                // This just adds a loading state. For a fully AJAX submission,
-                // you would use event.preventDefault() and the fetch API.
-                
-                // Show loading state
                 btnText.classList.add('hidden');
                 btnLoader.classList.remove('hidden');
                 submitBtn.disabled = true;
                 statusDiv.style.display = 'none';
                 
-                // The form will redirect to Formspree's thank you page or stay on the same page
-                // depending on your configuration. If you want to handle it via AJAX, let me know
-                // and I can provide that version.
-                
-                // Fallback: if the form doesn't redirect (e.g., if there's an error),
-                // reset the button after a timeout. This is a basic UX improvement.
                 setTimeout(() => {
                     if (submitBtn.disabled) {
                          btnText.classList.remove('hidden');
